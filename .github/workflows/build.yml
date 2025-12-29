@@ -74,6 +74,9 @@ jobs:
             base_image_flavor: main
             arch: x86_64
     steps:
+      - name: Collect Workflow Telemetry
+        uses: catchpoint/workflow-telemetry-action@v2
+
       - name: Mount BTRFS for podman storage
         uses: ublue-os/container-storage-action@main
         with:
